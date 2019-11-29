@@ -1,6 +1,7 @@
 FROM continuumio/miniconda3
 
 ENV HOME /root
+RUN apt-get update
 RUN apt-get install -y curl build-essential
 RUN conda config --add channels conda-forge
 RUN conda config --add channels bioconda
