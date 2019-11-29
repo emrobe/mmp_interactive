@@ -136,5 +136,8 @@ for DB, apt in zip(complete_df['DB'], complete_df['analysis_project_type']):
                 label.append("Unknown")
 complete_df['label'] = label
 
+if not os.path.isdir("mmp_interactive/inputdata"):
+    os.mkdir("mmp_interactive/inputdata")
+
 complete_df.to_csv(os.path.join(os.getcwd(), "mmp_interactive/inputdata/input.tsv"), sep="\t")
 
