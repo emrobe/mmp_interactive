@@ -22,7 +22,8 @@ floatheadermap = {
         'cds': 'cds',
         'pseudo_genes': 'pseudo_genes',
         #'rrnas': 'rrnas', (This is str before reformatting below.)
-        'tRNAs': 'trnas',
+	'Total_tRNAs': 'total_trnas',
+	'Unique_tRNAs':'unique_trnas',
         'frameshifted_genes': 'frameshifted_genes',
         'optimal_temperature': 'optimal_temperature',
         'plasmids': 'plasmids',

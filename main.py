@@ -22,7 +22,9 @@ parsed = pandas.read_csv(parsed_path, sep='\t')
 total = len(parsed)
 
 axis_map = {
-	"tRNA Count": "tRNAs",
+	#"tRNA Count": "tRNAs",
+	"Total tRNAs":"Total_tRNAs",
+	"Unique tRNAs":"Unique_tRNAs",
 	"5S rRNA count": "rRNA5S",
 	"16S rRNA count": "rRNA16S",
 	"23S rRNA count": "rRNA23S",
