@@ -60,7 +60,7 @@ qual_desc = Div(text=open(join(dirname(__file__), "quality_explaination.html")).
 # Create Input controls
 database = Select(title="Database", value="All", options=['All', 'MarRef', 'MarDB'])
 analysis_type = Select(title="Type", value="All", options=['All', 'Whole genome sequencing (WGS)', 'Metagenome assembled genome (MAG)', 'Single amplified genome (SAG)'])
-draft = Select(title="Draft Quality *", value="All", options=['All', 'Finished', 'High Quality Draft', 'Medium Quality Draft', 'Low Quality Draft', 'Very Low Quality Draft'])
+draft = Select(title="Draft Quality *", value="All", options=['All', 'Finished', 'High Quality Draft', 'Near Complete', 'Medium Quality Draft', 'Low Quality Draft', 'Very Low Quality Draft'])
 minqsscore = Slider(title="Minimum QS score", value=min(parsed['QS']), start=min(parsed['QS']), end=max(parsed['QS']), step=5)
 maxqsscore = Slider(title="Maximum QS score", value=max(parsed['QS']), start=-50, end=max(parsed['QS']), step=5)
 minlength = Slider(title="Minimum Genome Length", value=1, start=1, end=15000000, step=100000)

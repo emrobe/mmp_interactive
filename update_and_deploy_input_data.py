@@ -74,8 +74,10 @@ for index, row in complete_df.iterrows():
         quality.append('Finished')
     elif row['Completeness'] == 'missing' or row['Contamination'] == 'missing':
         quality.append('NA')
-    elif float(row['Completeness']) > 90 and float(row['Contamination']) < 5:
+    elif float(row['Completeness']) > 90 and float(row['Contamination']) < 5 and float(row['rRNA5S']) > 1 and float(row['rRNA16S']) > 1 and float(row['rRNA23S']) > 1 and float(row['Unique_tRNAs']) > 17:
         quality.append('High Quality Draft')
+    elif float(row['Completeness']) > 90 and float(row['Contamination']) < 5:
+        quality.append('Near Complete')
     elif float(row['Completeness']) >= 50 and float(row['Contamination']) < 10:
         quality.append('Medium Quality Draft')
     elif float(row['Completeness']) < 50 and float(row['Contamination']) < 10:
